@@ -1,5 +1,6 @@
 # AutoLocker
 [![Build Status](https://travis-ci.org/mcn2004/AutoLocker-Arduino.svg?branch=master)](https://travis-ci.org/mcn2004/AutoLocker-Arduino)
+
 Conjunto de programas para volver a tu Arduino un sistema de seguridad para puertas.
 
 La app genera una conexión por Bluetooth (Android -> BT 2.0 / 2.1 / 3.0) para mandar una contraseña con encriptación por MD5.
