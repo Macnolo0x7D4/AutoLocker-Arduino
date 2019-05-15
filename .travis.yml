@@ -13,7 +13,7 @@ script:
   - build_platform uno
   
 install:
-  - arduino --install-library "Servo","SPI","EEPROM","SoftwareSerial","Wire","WiFi",
+  - arduino --install-library "Servo"
 notifications:
   email:
     on_success: change

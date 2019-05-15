@@ -11,8 +11,8 @@
 #include "MFRC522Extended.h"
 #include "require_cpp11.h"
 #include <Servo.h>
-#include <EEPROM.h>
-#include <SPI.h>
+#include "EEPROM.h"
+#include "SPI.h"
 
 #define SS_PIN 10 
 #define RST_PIN 9

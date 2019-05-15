@@ -6,8 +6,7 @@
  * Copyright 2018 Macnolo Tech
  */
 #include <Servo.h>
-#include <EEPROM.h>
-#include <SoftwareSerial.h>
+#include "EEPROM.h"
 
 const int pin = 9;
 const int rx = 2;
@@ -18,14 +17,12 @@ int state = 0;
 String correctPassword1 = "fd272fe04b7d4e68effd01bddcc6bb34";
 String correctPassword2 = "451b7ed3a3f81564a51f3b904e345406";
 
-SoftwareSerial bt(rx, tx);
 Servo servo;
 
 void setup() {
   pinMode(rx, INPUT);
   pinMode(tx, OUTPUT);
   Serial.begin(9600);
-  bt.begin(9600);
   servo.attach(pin);
   pinMode(13, OUTPUT);
   if(EEPROM.read(0) == 1){
@@ -44,8 +41,8 @@ void setup() {
 }
 
 void loop() {
-  if (bt.available() > 0){
-    cmd = bt.readString();
+  if (Serial.available() > 0){
+    cmd = Serial.readString();
     if(cmd.equals(correctPassword1)){
       lock = true;
     }else if(cmd.equals(correctPassword2)){
@@ -71,5 +68,3 @@ void loop() {
     }
   }
 }
-
-
