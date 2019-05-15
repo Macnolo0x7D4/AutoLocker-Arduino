@@ -7,7 +7,9 @@
  * License: GPLv3
 */
 
-#include <MFRC522.h>
+#include "MFRC522.h"
+#include "MFRC522Extended.h"
+#include "require_cpp11.h"
 #include <Servo.h>
 #include <EEPROM.h>
 #include <SPI.h>
