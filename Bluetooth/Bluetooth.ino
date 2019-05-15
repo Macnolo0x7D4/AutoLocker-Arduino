@@ -6,8 +6,8 @@
  * Copyright 2018 Macnolo Tech
  */
 #include <Servo.h>
-#include <EEPROM.h>
-#include <SoftwareSerial.h>
+#include "EEPROM.h"
+#include "SoftwareSerial.h"
 
 const int pin = 9;
 const int rx = 2;
